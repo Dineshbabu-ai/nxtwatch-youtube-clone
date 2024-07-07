@@ -1,0 +1,32 @@
+.gaming-thumbnail {
+  width: 180px;
+  height: 240px;
+  margin-bottom: 15px;
+}
+.gaming-video-contianer {
+  margin: 15px;
+}
+.gaming-title {
+  font-weight: bold;
+  padding: 0px;
+  margin: 5px;
+  font-family: 'Roboto';
+}
+.gaming-views-count {
+  font-weight: 500;
+  padding: 0px;
+  margin: 5px;
+  font-family: 'Roboto';
+  color: #909090;
+}
+.gaming-worldwide-text {
+  font-weight: 500;
+  padding: 0px;
+  margin: 5px;
+  font-family: 'Roboto';
+  color: #909090;
+}
+.link-container {
+  list-style-type: none;
+  text-decoration: none;
+}

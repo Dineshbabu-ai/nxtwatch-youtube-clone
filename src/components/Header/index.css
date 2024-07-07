@@ -1,0 +1,141 @@
+.nxtWatch-logo {
+  height: 35px;
+  width: 100px;
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.icon-contianer {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  width: 170px;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .icon-contianer {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 220px;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.moon-icon {
+  width: 30px;
+  height: 30px;
+}
+.sunny-icon {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .moon-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .sunny-icon {
+    width: 40px;
+    height: 40px;
+    color: white;
+  }
+}
+.menu-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.logout-icon {
+  width: 30px;
+  height: 30px;
+}
+.profile-img {
+  width: 40px;
+  height: 40px;
+}
+.profile-btn {
+  background-color: transparent;
+  border-width: 0px;
+  display: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .profile-btn {
+    background-color: transparent;
+    border-width: 0px;
+    display: block;
+    cursor: pointer;
+  }
+}
+.moon-btn {
+  background-color: transparent;
+  border-width: 0px;
+  cursor: pointer;
+}
+.menu-btn {
+  background-color: transparent;
+  border-width: 0px;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    background-color: transparent;
+    border-width: 0px;
+    cursor: pointer;
+    display: none;
+  }
+}
+.logout-icon-btn {
+  background-color: transparent;
+  border-width: 0px;
+  cursor: pointer;
+}
+.logout-btn {
+  background-color: white;
+  color: #3b82f6;
+  border-style: solid;
+  border-color: #3b82f6;
+  width: 70px;
+  height: 30px;
+  display: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .logout-icon-btn {
+    background-color: white;
+    color: #3b82f6;
+    border-style: solid;
+    border-color: #3b82f6;
+    width: 70px;
+    height: 30px;
+    display: none;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logout-btn {
+    background-color: white;
+    color: #3b82f6;
+    border-style: solid;
+    border-color: #3b82f6;
+    width: 70px;
+    height: 35px;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.menu-unlist-container {
+  list-style-type: none;
+}

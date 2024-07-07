@@ -1,0 +1,24 @@
+.menu-item {
+  background-color: transparent;
+}
+
+.menu-item-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  border-width: 0px;
+  cursor: pointer;
+  height: 30px;
+  margin-bottom: 5px;
+  min-width: 80px;
+  max-width: 80px;
+}
+@media screen and (min-width: 768px) {
+  .menu-item-btn-container {
+    display: none;
+  }
+}
+.link-con {
+  text-decoration: none;
+}
