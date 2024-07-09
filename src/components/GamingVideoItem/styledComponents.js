@@ -9,12 +9,22 @@ export const LinkContainer = styled(Link)`
 
 export const GamingVideoContainer = styled.li`
   margin: 15px;
+
+  @media screen and (max-width: 575.98px) {
+    min-width: 130px;
+    max-width: 130px;
+    margin: 13px;
+  }
 `
 
 export const GamingThumbnail = styled.img`
-  width: 180px;
+  width: 100%;
   height: 240px;
   margin-bottom: 15px;
+  @media screen and (max-width: 575.98px) {
+    width: 100%;
+    height: 200px;
+  }
 `
 
 export const GamingTitle = styled.p`

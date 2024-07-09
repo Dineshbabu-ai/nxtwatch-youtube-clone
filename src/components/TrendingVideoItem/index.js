@@ -11,6 +11,7 @@ import {
   ProfileTitle,
   ProfileText,
   ProfileTextContainer,
+  ProfileTextMinCon,
 } from './styledComponents'
 import SavedContext from '../../context/SavedContext'
 
@@ -37,9 +38,11 @@ const TrendingVideoItem = props => {
                   <ProfileTextContainer themeChange={changeTheme}>
                     <ProfileText>{name}</ProfileText>
                     <ProfileText>.</ProfileText>
-                    <ProfileText>{viewCount} views</ProfileText>
-                    <ProfileText>.</ProfileText>
-                    <ProfileText>{years} years ago</ProfileText>
+                    <ProfileTextMinCon>
+                      <ProfileText>{viewCount} views</ProfileText>
+                      <ProfileText>.</ProfileText>
+                      <ProfileText>{years} years ago</ProfileText>
+                    </ProfileTextMinCon>
                   </ProfileTextContainer>
                 </ProfileAllTextContainer>
               </ProfileContainer>

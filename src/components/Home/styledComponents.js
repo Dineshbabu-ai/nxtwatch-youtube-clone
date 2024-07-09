@@ -94,7 +94,25 @@ export const UnorderedListType = styled.ul`
   padding: 20px;
   margin: 0px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 575.98x) {
+    width: 100%;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767.98px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

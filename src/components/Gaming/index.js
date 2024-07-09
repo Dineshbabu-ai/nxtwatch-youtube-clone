@@ -100,7 +100,7 @@ class Gaming extends Component {
   )
 
   handleFailureView = () => {
-    console.log('dine')
+    console.log('=>')
     return (
       <SavedContext.Consumer>
         {value => {

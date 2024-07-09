@@ -12,7 +12,7 @@ import {
 import SavedContext from '../../context/SavedContext'
 
 const NotFound = () => {
-  console.log('dinesh')
+  console.log('=>')
   return (
     <SavedContext.Consumer>
       {value => {

@@ -29,6 +29,14 @@ export const UnorderedList = styled.ul`
   align-items: center;
   width: 100%;
 
+  @media screen and (max-width: 575.98px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+
   @media screen and (min-width: 768px) {
     list-style-type: none;
     padding: 20px;

@@ -102,7 +102,7 @@ class Trending extends Component {
   )
 
   handleFailureView = () => {
-    console.log('dinesh')
+    console.log('=>')
     return (
       <SavedContext.Consumer>
         {value => {

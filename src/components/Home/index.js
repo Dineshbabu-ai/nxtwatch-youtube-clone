@@ -166,7 +166,7 @@ class Home extends Component {
   )
 
   handleSearchFailure = () => {
-    console.log('dinesh')
+    console.log('=>')
     return (
       <SavedContext.Consumer>
         {value => {
@@ -201,7 +201,7 @@ class Home extends Component {
   }
 
   handleFailureView = () => {
-    console.log('oo')
+    console.log('=>')
     return (
       <SavedContext.Consumer>
         {value => {

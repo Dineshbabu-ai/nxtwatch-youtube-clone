@@ -74,22 +74,29 @@ class VideoItemDetails extends Component {
       },
     }
 
-    const response = await fetch(apiUrl, options)
-    const data = await response.json()
-
-    if (response.ok) {
+    try {
+      const response = await fetch(apiUrl, options)
+      if (!response.ok) {
+        throw new Error('Failed to fetch')
+      }
+      const data = await response.json()
       const updateVideoDetails = this.updateFetchedData(data.video_details)
       this.setState({
         videoDetails: updateVideoDetails,
         apiStatus: apiStatusConstants.success,
       })
-    } else {
+    } catch (error) {
       this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 
+  handleSaveVideoItem = (saveVideoItem, videoDetails) => {
+    saveVideoItem(videoDetails)
+    this.setState(prevState => ({isSaved: !prevState.isSaved}))
+  }
+
   handleVideoDetailsView = () => {
-    const {videoDetails, isSaved} = this.state
+    const {videoDetails, isSaved, isLike, isDislike} = this.state
 
     const {
       channel,
@@ -99,25 +106,25 @@ class VideoItemDetails extends Component {
       description,
       videoUrl,
     } = videoDetails
+    if (!channel) return null
     const {name, profileImageUrl, subscriberCount} = channel
     const publishedDate = new Date(publishedAt)
     const currentDate = new Date()
     const years = currentDate.getFullYear() - publishedDate.getFullYear()
-    const {isLike, isDislike} = this.state
     const likes = isLike ? 'like-btn-icon-like' : 'like-btn-icon'
-
     const dislikes = isDislike ? 'dislike-btn-icon-dislike' : 'dislike-btn-icon'
+    const saved = isSaved ? 'save-btn-icon-saved' : 'save-btn-icon'
 
     return (
       <SavedContext.Consumer>
         {value => {
-          const {saveVideoItem, isSavedBtn, savedList, changeTheme} = value
+          const {saveVideoItem, savedList, changeTheme} = value
+          const isVideoSaved = savedList.some(
+            item => item.id === videoDetails.id,
+          )
+          console.log(isVideoSaved)
+          const IsSaved = isVideoSaved ? 'save-btn-icon-saved' : 'save-btn-icon'
 
-          const saved = isSaved ? 'save-btn-icon-saved' : 'save-btn-icon'
-
-          const handleSaveVideoItem = () => {
-            saveVideoItem(videoDetails)
-          }
           return (
             <div className="video-details-container">
               <ReactPlayer url={videoUrl} playing controls width="100%" />
@@ -158,17 +165,18 @@ class VideoItemDetails extends Component {
                       </button>
                       <p>Dislike</p>
                     </li>
-
                     <li className="like-btn-icon-container">
                       <button
                         type="button"
                         className="button-like-dislike"
-                        onClick={handleSaveVideoItem}
+                        onClick={() =>
+                          this.handleSaveVideoItem(saveVideoItem, videoDetails)
+                        }
                       >
                         .
                         <MdSave className={saved} />
                       </button>
-                      <p>Save</p>
+                      <p className={saved}>{isVideoSaved ? 'Saved' : 'Save'}</p>
                     </li>
                   </ul>
                 </div>
@@ -207,7 +215,7 @@ class VideoItemDetails extends Component {
 
   handleLoading = () => (
     <div className="loader-container" data-testid="loader">
-      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+      <Loader type="ThreeDots" color="#3b82f6" height="50" width="50" />
     </div>
   )
 

@@ -47,6 +47,7 @@ export const InputStyling = styled.input`
   width: 100%;
   padding: 10px;
   margin-top: 5px;
+  color: ${props => (props.themeChange ? 'white' : 'black')};
   border-color: ${props => (props.themeChange ? '#7e858e' : '#f1f5f9')};
   border-radius: 5px;
   background-color: ${props => (props.themeChange ? 'transparent' : '')};
@@ -66,6 +67,21 @@ export const LoginCard = styled.div`
   @media screen and (min-width: 768px) {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
+    width: 30%;
+  }
+  @media screen and (max-width: 578.98px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767.98px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    width: 50%;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    width: 40%;
+  }
+  @media screen and (min-width: 1200px) {
     width: 30%;
   }
 `
